@@ -1,0 +1,53 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_symptoms
+  - ask_food_recipe_ingredients
+  - thank_you
+
+entities:
+  - animal_type
+  - symptom
+  - ingredient
+
+slots:
+  animal_type:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: animal_type
+  symptom:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: symptom
+  ingredient:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ingredient
+
+responses:
+  utter_greet:
+    - text: "Hello! I'm here to help with your animal-related questions. What's up?"
+  utter_goodbye:
+    - text: "Goodbye! Take care of your furry friends!"
+  utter_thank_you:
+    - text: "You're welcome!"
+  utter_ask_symptoms:
+    - text: "I'm not a vet, but I can provide some general info. What symptoms is your {animal_type} showing?"
+  utter_ask_food_recipe_ingredients:
+    - text: "I can suggest some pet-safe ingredients for a {animal_type} recipe. What kind of recipe are you looking for?"
+
+actions:
+  - action_handle_symptoms
+  - action_provide_recipe_ingredients
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

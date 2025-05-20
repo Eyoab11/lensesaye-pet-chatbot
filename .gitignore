@@ -1,0 +1,27 @@
+# Virtual Environment
+venv_animal_chatbot/
+.venv/
+venv/
+ENV/
+env/
+*.pyc
+__pycache__/
+
+# Rasa specific
+.rasa/
+models/*
+results/
+*.db
+
+# IDE / OS specific (optional but good)
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Secrets (if you have any - better to use environment variables)
+# .env
+# credentials.yml # Be careful if this contains sensitive API keys

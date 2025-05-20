@@ -1,0 +1,15 @@
+version: "3.1"
+
+stories:
+- story: greet and ask symptoms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_symptoms
+  - action: action_handle_symptoms
+- story: greet and ask recipe ingredients
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_food_recipe_ingredients
+  - action: action_provide_recipe_ingredients

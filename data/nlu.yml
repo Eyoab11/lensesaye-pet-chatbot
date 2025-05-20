@@ -1,0 +1,35 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey there
+    - good morning
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you later
+    - good night
+- intent: thank_you
+  examples: |
+    - thanks
+    - thank you
+    - appreciate it
+    - thanks a lot
+- intent: ask_symptoms
+  examples: |
+    - My [dog](animal_type) is [vomiting](symptom)
+    - What should I do if my [cat](animal_type) has [diarrhea](symptom)?
+    - My [puppy](animal_type) is [coughing](symptom) a lot
+    - Is [sneezing](symptom) normal for a [kitten](animal_type)?
+    - [Dog](animal_type) has [itching](symptom) and scratching
+- intent: ask_food_recipe_ingredients
+  examples: |
+    - What ingredients are safe for a [dog](animal_type) treat?
+    - Can you suggest a recipe for [cat](animal_type) food?
+    - What can I use to make [puppy](animal_type) biscuits?
+    - Safe [ingredients](ingredient) for [kitten](animal_type) meals?
+    - Can I use [chicken](ingredient) for [dog](animal_type) food?
