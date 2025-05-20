@@ -41,6 +41,8 @@ responses:
     - text: "You're welcome!"
   utter_ask_symptoms:
     - text: "I'm not a vet, but I can provide some general info. What symptoms is your {animal_type} showing?"
+  utter_symptom_causes:
+    - text: "{symptom} in your {animal_type} could be caused by {causes}. {advice}"
   utter_ask_food_recipe_ingredients:
     - text: "I can suggest some pet-safe ingredients for a {animal_type} recipe. What kind of recipe are you looking for?"
 
